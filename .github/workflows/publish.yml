@@ -15,15 +15,20 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: actions-yarn
+      - name: Install
         uses: CultureHQ/actions-yarn@master
         with:
-          args: |
-            install
-            lint
-            build
+          args: install
+      - name: Lint
+        uses: CultureHQ/actions-yarn@master
+        with:
+          args: lint
+      - name: Build
+        uses: CultureHQ/actions-yarn@master
+        with:
+          args: build
 
-      - name: FTP-Deploy-Action
+      - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@3.0.0
         with:
           ftp-server: ftp://ftp.jamiegl.com/
