@@ -46,7 +46,7 @@ _\* Not affiliated with nor recognised by [Abertay University](https://abertay.a
 - Simple.
 - Satire.
 - Hail Glorious Supreme Leader, the pirate king Jamie Lievesley.
-- Does not infringe on Abertay copyright, or misrepresent itself as officially affiliated with the University.
+- Does not infringe on Abertay copyright, or misrepresent itself as officially affiliated with the university.
 - Responsive design.
 - Works without JavaScript enabled, except extraneous cosmetic features.
 - Runs on common modern browsers, since 2017:
