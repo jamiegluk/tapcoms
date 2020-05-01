@@ -11,9 +11,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: actions-yarn
+      - name: Install
         uses: CultureHQ/actions-yarn@master
         with:
-          args: |
-            install
-            lint
+          args: install
+      - name: Lint
+        uses: CultureHQ/actions-yarn@master
+        with:
+          args: lint
