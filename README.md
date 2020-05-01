@@ -1,12 +1,12 @@
 ﻿# ![Logo](src/img/favicon/favicon-32x32.png) TAPComS
 
-![GitHub package.json version](https://img.shields.io/github/package-json/v/jamiegluk/jamiegl?color=blue)
-![GitHub publish Workflow Status](https://img.shields.io/github/workflow/status/jamiegluk/tapcoms/Publish%20Website?label=publish)
-![Website](https://img.shields.io/website?url=http%3A%2F%2Fabarrrtay.com)
+[![GitHub package.json version](https://img.shields.io/github/package-json/v/jamiegluk/tapcoms?color=blue)](https://github.com/jamiegluk/tapcoms/releases)
+[![GitHub publish Workflow Status](https://img.shields.io/github/workflow/status/jamiegluk/tapcoms/Publish%20Website?label=publish)](https://github.com/jamiegluk/tapcoms/actions?query=workflow%3A%22Publish+Website%22)
+[![Website](https://img.shields.io/website?url=http%3A%2F%2Fabarrrtay.com)](http://abarrrtay.com)
 
-> The Abarrrtay Pirate Computing Society website, at [abarrrtay.com](http://abarrrtay.com).
+> The Abarrrtay Pirate Computing Society website.
 
-**[Click to View Website Online](http://abarrrtay.com)**.
+**[Click to View abarrrtay.com Online](http://abarrrtay.com)**.
 
 [Mirror](https://memes.jamiegl.com/pirates)
 
