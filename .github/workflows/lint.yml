@@ -1,6 +1,6 @@
 # On commit: checks linter passes
 
-name: Publish Website
+name: Lint
 
 on: [push, pull_request]
 
