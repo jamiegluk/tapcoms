@@ -1,0 +1,503 @@
+/*
+	pirates.css
+	Style for The Abertay Pirate Computing Society page
+	Jamie Lievesley
+	15 Sep 2014 22:40
+*/
+
+/*
+ DEFINE STUFF
+*/
+
+@font-face {
+  font-family: primitive;
+  src: url("./../fonts/primitive.ttf");
+}
+
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes ad-move {
+  0% {
+    color: black;
+    font-size: 15px;
+    line-height: 15px;
+  }
+  25% {
+    color: green;
+  }
+  50% {
+    color: purple;
+    font-size: 20px;
+    line-height: 460px;
+  }
+  75% {
+    color: orange;
+  }
+  100% {
+    color: black;
+    font-size: 15px;
+    line-height: 15px;
+  }
+}
+@keyframes ad-move {
+  0% {
+    color: black;
+    font-size: 15px;
+    line-height: 15px;
+  }
+  25% {
+    color: green;
+  }
+  50% {
+    color: purple;
+    font-size: 20px;
+    line-height: 460px;
+  }
+  75% {
+    color: orange;
+  }
+  100% {
+    color: black;
+    font-size: 15px;
+    line-height: 15px;
+  }
+}
+
+/*
+ FIX SOME DEFAULT THINGS
+*/
+
+/* Remove default margins etc as they can confuse things */
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Vertically align paragraphs */
+
+p {
+  vertical-align: middle;
+}
+
+/*
+ SETUP BASIC STUFF
+*/
+
+/* Set up some basic stuff for the entire body */
+
+body {
+  text-align: left;
+  font-family: verdana, arial, helvetica, sans-serif;
+  color: #000000;
+  font-size: 1em;
+  margin: 5px 0 50px;
+  height: 100%;
+  width: 100%;
+}
+/* Preload Images */
+body:after {
+  display: none;
+  content: url("./../img/cop0.png") url("./../img/cop1.png")
+    url("./../img/cop2.png") url("./../img/cop3.png");
+}
+
+/*
+ PAGE STYLES
+ */
+
+#container {
+  background-color: black;
+  background: linear-gradient(135deg, black 0%, #222222 100%); /* W3C */
+  color: white;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: inline-flex;
+  overflow: auto;
+}
+#container-backimg {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  background-image: url("./../img/ship_transparentback_1080h_opacity.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: auto 100%;
+}
+
+/* Ad */
+
+#ad {
+  display: none !important; /* Get rid of it */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  display: block;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 5px;
+  z-index: 100;
+}
+#ad::after {
+  content: "Advert!";
+  font-family: primitive;
+  font-variant: small-caps;
+  font-size: 15px;
+  text-align: left;
+  padding: 5px;
+  color: black;
+  line-height: auto;
+  vertical-align: top;
+
+  -webkit-animation: ad-move 7000ms infinite;
+  -moz-animation: ad-move 7000ms infinite;
+  -ms-animation: ad-move 7000ms infinite;
+
+  animation: ad-move 7000ms infinite;
+}
+#ad:hover::after {
+  content: "Shameless Ad!!!";
+}
+#ad.notext::after {
+  display: none;
+}
+#ad.blocked::after {
+  content: "Ad Blocked? :(";
+  left: 0;
+}
+#ad.blocked:hover::after {
+  content: "You prevented me earning a millipenny 8==D";
+}
+
+@media screen and (max-width: 450px) {
+  #ad {
+    display: none;
+  }
+}
+@media screen and (max-width: 760px) {
+  #ad:after {
+    display: none;
+  }
+}
+
+/* Audio toggle button */
+
+.toolButton {
+  position: fixed;
+  display: block;
+  width: auto;
+  height: auto;
+  padding: 5px;
+  z-index: 100;
+  border: 5px solid black;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+.toolButton:hover {
+  text-decoration: underline;
+  border-color: magenta;
+}
+
+#audioButton {
+  bottom: 0;
+  left: 0;
+  margin-top: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+#audioButton.mute {
+  text-decoration: line-through;
+  color: red;
+}
+
+/* Home button */
+
+#homeButton {
+  top: 0;
+  left: 0;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-left: 10px;
+}
+#homeButton::after {
+  content: "TAPComS";
+  position: fixed;
+  display: block;
+  top: calc(30px - 0.5em);
+  left: calc(1em + 60px);
+  font-family: primitive;
+  color: white;
+  margin: auto;
+  text-align: center;
+  width: auto;
+  background-color: #000000cc;
+  outline: 10px solid #00000050;
+}
+#top:not(.hidden) ~ #homeButton {
+  display: none;
+}
+
+/*
+	Content
+*/
+
+.contents {
+  display: block;
+  margin: auto;
+  text-align: center;
+  padding: 30px;
+  overflow: auto;
+}
+.contents.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 1300px) {
+  .contents:not(#top) {
+    margin-top: calc(30px + 1em);
+  }
+}
+
+title {
+  display: block;
+  font-family: primitive;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: auto;
+  text-align: center;
+  width: auto;
+  max-width: 80%;
+}
+
+@media screen and (max-width: 812px) and (min-width: 451px) {
+  title {
+    float: right;
+    clear: both;
+    text-align: right;
+  }
+}
+@media screen and (max-width: 451px) {
+  title {
+    max-width: 100%;
+  }
+}
+
+#image,
+#image img {
+  margin: auto;
+  display: block;
+}
+#image {
+  float: center;
+  clear: both;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+#image img {
+  width: 184px;
+  height: 250px;
+
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 5000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin;
+  -moz-animation-duration: 5000ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@media screen and (max-width: 560px) and (min-width: 451px) {
+  #image {
+    padding-left: 150px;
+  }
+}
+
+button,
+input[type="submit"] {
+  display: block;
+  font-family: primitive;
+  margin: auto;
+  padding: 15px;
+  margin-top: 15px;
+  border: 5px solid black;
+  background-color: white;
+  cursor: pointer;
+}
+button:hover,
+input[type="submit"]:hover {
+  border-color: cyan;
+}
+
+#hoebut {
+  background-image: url("http://memes.jamiegl.com/img/icon_circle32.png");
+  background-size: 32px 32px;
+  background-position: 15px center;
+  background-repeat: no-repeat;
+  padding-left: 57px;
+}
+
+.invisa,
+.invisa * {
+  text-decoration: none;
+  color: default;
+}
+
+#container-fbLikeBox {
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+  position: relative;
+}
+
+p {
+  margin-bottom: 10px;
+}
+p:last-of-type {
+  margin-bottom: 0;
+}
+
+#elites figure {
+  display: inline-block;
+  max-width: 250px;
+}
+
+#elites img {
+  width: 250px;
+  height: 250px;
+}
+
+#elites figcaption {
+  color: white;
+  margin-top: 15px;
+}
+
+#elites figcaption i {
+  color: gold;
+  text-shadow: 0px 0px 10px white;
+  margin-top: 5px;
+}
+
+#ex-elites p {
+  margin-top: 30px;
+  font-size: 1.2em;
+  opacity: 0.8;
+}
+
+#ex-elites img {
+  opacity: 0.5;
+}
+
+#ex-elites figcaption i {
+  color: gray;
+  text-decoration: line-through;
+}
+
+.glorious {
+  color: gold;
+}
+.glorious .glory {
+  color: white;
+}
+
+#voteBanner {
+  width: 900px;
+  max-width: 80%;
+  border: 5px solid gold;
+  background-color: white;
+  color: black;
+  margin: auto;
+  display: block;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+
+#voteForm {
+  margin: auto;
+  margin-top: 30px;
+  max-width: 50%;
+}
+
+#voteForm legend {
+  margin-bottom: 15px;
+}
+
+#voteForm input {
+  margin-bottom: 10px;
+}
+#voteForm input[type="submit"] {
+  margin-top: 20px;
+}
+
+#votesubmit progress {
+  display: block;
+  margin: auto;
+  margin-top: 15px;
+  max-width: 80%;
+  width: 500px;
+  height: 30px;
+}

@@ -1,0 +1,58 @@
+{
+  "name": "tapcoms",
+  "version": "1.0.0",
+  "description": "The Abarrrtay Pirate Computing Society website at abarrrtay.com",
+  "keywords": [
+    "pirates",
+    "abertay",
+    "abarrrtay",
+    "uni",
+    "university",
+    "website"
+  ],
+  "homepage": "https://github.com/jamiegluk/tapcoms",
+  "bugs": {
+    "url": "https://github.com/jamiegluk/tapcoms/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamiegluk/tapcoms.git"
+  },
+  "license": "MPL-2.0",
+  "author": "Jamie Lievesley <jamie@jamiegl.co.uk> (https://jamiegl.co.uk)",
+  "scripts": {
+    "build": "yarn run clean && cpy \"**/*\" \"../dist/\" --cwd=src --parents && prettier --write dist",
+    "clean": "rimraf dist/*",
+    "lint": "prettier --check .",
+    "lint:fix": "prettier --write .",
+    "start": "yarn run build && node express.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,md,json,html,yml}": "prettier --write"
+  },
+  "browserslist": [
+    "last 1000 Chrome versions and since 2014-09-15",
+    "last 1000 Firefox versions and since 2014-09-15",
+    "last 1000 Android versions and since 2014-09-15",
+    "last 1000 ChromeAndroid versions and since 2014-09-15",
+    "last 1000 FirefoxAndroid versions and since 2014-09-15, IE 11, IE 10"
+  ],
+  "devDependencies": {
+    "@types/jquery": "^1.10.35",
+    "@types/jquery.tools": "^1.2.5",
+    "@types/jqueryui": "^1.11.28",
+    "@types/node": "^13.13.4",
+    "cpy-cli": "^3.1.0",
+    "express": "^4.17.1",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.1.7",
+    "prettier": "^2.0.5",
+    "prettier-plugin-packagejson": "^2.2.2",
+    "rimraf": "^3.0.2"
+  }
+}

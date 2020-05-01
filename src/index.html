@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+  <!--
+	index.html
+	The Abarrrtay Pirate Computing Society
+	Jamie Lievesley
+	15 Sep 2014 22:15
+-->
+
+  <head>
+    <title>The Pirate Computing Society</title>
+    <meta charset="utf-8" />
+    <!-- SEO for single link without .html -->
+    <link rel="canonical" href="http://abarrrtay.com/pirates/" />
+    <!-- Dimension fixes -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <!-- Page Style -->
+    <link rel="stylesheet" type="text/css" href="./css/pirates.css" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="57x57"
+      href="img/favicon/apple-touch-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="114x114"
+      href="img/favicon/apple-touch-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="72x72"
+      href="img/favicon/apple-touch-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="144x144"
+      href="img/favicon/apple-touch-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="60x60"
+      href="img/favicon/apple-touch-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="120x120"
+      href="img/favicon/apple-touch-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="76x76"
+      href="img/favicon/apple-touch-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="152x152"
+      href="img/favicon/apple-touch-icon-152x152.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="img/favicon/favicon-196x196.png"
+      sizes="196x196"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="img/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="img/favicon/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="img/favicon/favicon-16x16.png"
+      sizes="16x16"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="img/favicon/favicon-128.png"
+      sizes="128x128"
+    />
+    <meta name="application-name" content="TAPComS" />
+    <meta name="theme-color" content="#212121" />
+    <meta name="msapplication-TileColor" content="#212121" />
+    <meta name="msapplication-navbutton-color" content="#212121" />
+    <meta
+      name="msapplication-TileImage"
+      content="img/favicon/mstile-144x144.png"
+    />
+    <meta
+      name="msapplication-square70x70logo"
+      content="img/favicon/mstile-70x70.png"
+    />
+    <meta
+      name="msapplication-square150x150logo"
+      content="img/favicon/mstile-150x150.png"
+    />
+    <meta
+      name="msapplication-wide310x150logo"
+      content="img/favicon/mstile-310x150.png"
+    />
+    <meta
+      name="msapplication-square310x310logo"
+      content="img/favicon/mstile-310x310.png"
+    />
+    <!-- Extra mobile stuff -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- jQuery -->
+    <script
+      type="text/javascript"
+      src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"
+    ></script>
+    <!-- HTML5 backwards compat fixer -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Page Script -->
+    <script type="text/javascript" src="./js/pirates.js"></script>
+  </head>
+
+  <body>
+    <!-- Top Level Wrapper -->
+    <div id="container">
+      <div id="container-backimg">
+        <!-- Ad -->
+        <div id="ad">
+          <script
+            async
+            src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+          ></script>
+          <!-- jamiewtf -->
+          <ins
+            class="adsbygoogle"
+            style="display: inline-block; width: 120px; height: 240px;"
+            data-ad-client="ca-pub-9919963224477211"
+            data-ad-slot="2100467757"
+          ></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+
+        <!-- Main Contents -->
+        <div id="top" class="contents">
+          <title>The Abarrrtay Pirate Computing Society (TAPComS)</title>
+          <section id="image">
+            <img src="./img/logo250.png" alt="TAPComS logo" />
+          </section>
+          <section id="options">
+            <a href="#wtf" class="invisa" onclick="return false;">
+              <button id="wtfbut" onclick="butClicked('wtf')">WTF?</button></a
+            >
+            <a href="#enlist" class="invisa" onclick="return false;">
+              <button id="enlistbut" onclick="butClicked('enlist')">
+                Enlist
+              </button></a
+            >
+            <a href="#elites" class="invisa" onclick="return false;">
+              <button id="elitesbut" onclick="butClicked('elites')">
+                Elite Crew
+              </button></a
+            >
+            <a href="#booty" class="invisa" onclick="return false;">
+              <button id="bootybut" onclick="butClicked('booty')">
+                Surrender Swag and/or Booty
+              </button></a
+            >
+            <a href="http://memes.jamiegl.com" class="invisa">
+              <button id="hoebut">Yo Hoe.</button></a
+            >
+          </section>
+          <section id="like">
+            <!-- FB like box -->
+            <div id="container-fbLikeBox">
+              <div
+                class="fb-like-box"
+                style="background-color: white;"
+                data-href="https://www.facebook.com/pages/Pirate-Computing-Society/340159872810330"
+                data-colorscheme="light"
+                data-show-faces="true"
+                data-header="true"
+                data-stream="false"
+                data-show-border="true"
+              ></div>
+            </div>
+          </section>
+        </div>
+
+        <!-- About -->
+        <div id="wtf" class="contents hidden">
+          <p>
+            In a land before us, there was only the official Computing Society.
+            <br />
+            They were set up with the fundamentals of pub, computing and laughs.
+            <br />
+          </p>
+          <p>
+            One day these values were threatened and the committee was
+            infiltrated, tainted and destroyed. <br />
+            Original members were removed in the name of 'seriousness' or
+            something. <br />
+          </p>
+          <p>
+            Banished from the nation of Abertay Computing Society committee,
+            <br />
+            but not to be defeated, a new, better, piratier, illegal(ish)
+            society was created. <br />
+            And hence, The Abertay Pirate Computing Society (TAPComS) was
+            created. <br />
+            We still retain our roots, with the one who inspired us (the dread
+            pirate Scott Wares) <br />
+            remaining as our mascot in logo, but their committee are now sworn
+            enemies. <br />
+          </p>
+          <p>
+            Yaaaaarrrr! Yo Hoe.
+          </p>
+          <p>
+            We are computing pirates. <br />
+            Enemies of the state (Abertay). <br />
+            No Macs/pricks/Dewars allowed. <br />
+            All hail <span class="glorious">glorious supreme leader</span>.
+            <br />
+            All members required to pillage swag and booty regularly.
+          </p>
+        </div>
+
+        <!-- Enlist -->
+        <div id="enlist" class="contents hidden">
+          <a
+            href="https://www.facebook.com/groups/763215407070800/"
+            class="invisa"
+            target="_blank"
+          >
+            <button>YOLO.</button></a
+          >
+        </div>
+
+        <!-- Elite Crew -->
+        <div id="elites" class="contents hidden">
+          <a href="#vote" class="invisa"
+            ><div id="voteBanner">
+              <b>Democratic Voting Now Open!</b> <br />
+              Click this here bannarrr, yaar be needin ta make yer vote count.
+            </div></a
+          >
+
+          <a
+            href="https://www.facebook.com/jamie.lievesley"
+            class="invisa"
+            target="_blank"
+            ><figure>
+              <img
+                src="./img/heads/jamiehead250.png"
+                alt="Jamie 'Jaim' Lievesley"
+              />
+              <figcaption>
+                Jamie Lievesley <br />
+                <i class="glorious">Glorious Supreme Leader</i>
+              </figcaption>
+            </figure></a
+          >
+          <a
+            href="https://www.facebook.com/profile.php?id=1444985066"
+            class="invisa"
+            target="_blank"
+            ><figure>
+              <img src="./img/heads/callumhead250.png" alt="Callum Grieve" />
+              <figcaption>
+                Callum Grieve <br />
+                <i>Co-führer</i>
+              </figcaption>
+            </figure></a
+          >
+          <a
+            href="https://www.facebook.com/liam.dick.167"
+            class="invisa"
+            target="_blank"
+            ><figure>
+              <img src="./img/heads/dickhead250.png" alt="Liam the Dick" />
+              <figcaption>
+                Liam Dick <br />
+                <i>President of Plunder</i>
+              </figcaption>
+            </figure></a
+          >
+          <a
+            href="https://www.facebook.com/john.flynn.90663"
+            class="invisa"
+            target="_blank"
+            ><figure>
+              <img
+                src="./img/heads/johnhead250.png"
+                alt="John 'Lazarus The Foot' Flynn"
+              />
+              <figcaption>
+                John Flynn <br />
+                <i>Mr Pirate Computing Society of the Year 2016</i>
+              </figcaption>
+            </figure></a
+          >
+          <a
+            href="https://www.facebook.com/ThyCammeyHalley"
+            class="invisa"
+            target="_blank"
+            ><figure>
+              <img
+                src="./img/heads/cammyhead250.png"
+                alt="Cameron 'DJ Wonton' Halley"
+              />
+              <figcaption>
+                Cammy Halley <br />
+                <i>Caliphate of the Wonton Dynasty</i>
+              </figcaption>
+            </figure></a
+          >
+          <a
+            href="https://www.facebook.com/AndrewAppreciationSociety"
+            class="invisa"
+            target="_blank"
+            ><figure>
+              <img src="./img/heads/gingehead250.png" alt="Ginge" />
+              <figcaption>
+                Andrew Marshall <br />
+                <i>Ginge</i>
+              </figcaption>
+            </figure></a
+          >
+          <span id="ex-elites">
+            <p>Walked tha plank:</p>
+            <a
+              href="https://www.facebook.com/NiPpl3DoGgi3"
+              class="invisa"
+              target="_blank"
+              ><figure>
+                <img src="./img/heads/gowhead250.png" alt="Michael Gow" />
+                <figcaption>
+                  Gow <br />
+                  <i>Prophet</i>
+                </figcaption>
+              </figure></a
+            >
+            <a
+              href="https://www.facebook.com/marcus.adamson.5"
+              class="invisa"
+              target="_blank"
+              ><figure>
+                <img
+                  src="./img/heads/walrushead250.png"
+                  alt="Marcus Adamson Bastard"
+                />
+                <figcaption>
+                  Marcus Adamson <br />
+                  <i>Mr Pirate Computing Society of the Year 2014-2015</i>
+                </figcaption>
+              </figure></a
+            >
+          </span>
+        </div>
+
+        <!-- Surrender Swag Booty -->
+        <div id="booty" class="contents hidden">
+          Swiggity swoot.
+        </div>
+
+        <!-- Yo Hoe -->
+        <div id="hoe" class="contents hidden">
+          <a href="/jamie" class="invisa">
+            <button>Bitches in da hood... yaaarrr.</button></a
+          >
+        </div>
+
+        <!-- Democratic Voting -->
+        <div id="vote" class="contents hidden">
+          <p>
+            Democratic Voting. Like any good society in the land, we here
+            pirates be fair mateys. <br />
+            Yer be gettin the chance for votin aarrr
+            <span class="glorious">Glorious Supreme Leader</span> in-ter
+            powerrr. <br />
+            He who be fairrly elected is given almighty rule of aaarrr society
+            <br />
+            and will be electin his chosen mateys for the Elite Crew, the best
+            of aarrr scurvy seadogs. <br />
+          </p>
+
+          <form
+            id="voteForm"
+            method="post"
+            onsubmit="voteSubmit(this); return false;"
+          >
+            <fieldset required>
+              <legend>
+                Choose carefully who the society leader should be from the list
+                below:
+              </legend>
+              <input
+                type="radio"
+                name="voteleader"
+                id="voteJL"
+                value="Jamie Lievesley"
+                checked
+              />
+              <label for="voteJL"> Jamie Lievesley </label><br />
+              <input
+                type="radio"
+                name="voteleader"
+                id="voteJL2"
+                value="Jamie Lievesley"
+              />
+              <label for="voteJL2"> Jamie Lievesley </label><br />
+              <input
+                type="radio"
+                name="voteleader"
+                id="voteCG"
+                value="Callum Grieve"
+              />
+              <label for="voteCG"> Callum Grieve </label><br />
+              <input type="radio" name="voteleader" id="voteGow" value="Gow" />
+              <label for="voteGow"> Gow </label><br />
+              <input
+                type="radio"
+                name="voteleader"
+                id="voteMA"
+                value="Marcus Adamson"
+              />
+              <label for="voteMA"> Marcus Adamson </label><br />
+              <input
+                type="radio"
+                name="voteleader"
+                id="voteLD"
+                value="Liam Dick"
+              />
+              <label for="voteLD"> Liam Dick </label><br />
+              <input type="radio" name="voteleader" id="voteAM" value="Ginge" />
+              <label for="voteAM"> Ginge </label><br />
+              <input
+                type="radio"
+                name="voteleader"
+                id="voteJL3"
+                value="Jamie Lievesley"
+              />
+              <label for="voteJL3"> Jamie Lievesley </label><br />
+              <input
+                type="radio"
+                name="voteleader"
+                id="voteOther"
+                value="other"
+              />
+              <label for="voteOther">
+                Other:
+                <input
+                  type="text"
+                  name="voteleadertext"
+                  id="voteOtherText"
+                  value=""
+                  placeholder="Name Here"
+                /> </label
+              ><br />
+              <input type="submit" value="Cast Vote" />
+            </fieldset>
+          </form>
+        </div>
+
+        <!-- Vote Submition Process -->
+        <div id="votesubmit" class="contents hidden">
+          <p id="voteProgressText">No vote submitted</p>
+          <progress id="voteProgress" max="100"></progress>
+        </div>
+
+        <!-- Vote Lost -->
+        <div id="votelost" class="contents hidden">
+          <p style="color: red;">Error!</p>
+          <p>
+            Unfortunately your vote was mysteriously lost. <br />
+            Luckily we have still placed a vote in its place for the most
+            sensible candidate: <br />
+            Jamie Lievesley.
+          </p>
+          <p>
+            In completely unrelated news it has been detected that you are being
+            unfaithful to the pirate state. <br />
+            As you will be well aware, The Abarrrtay Pirate Computing Society is
+            a glorious, diplomatic and fair society. <br />
+            You will no doubt want to punish yourself for this action,
+            irregardless: traitors must be punished. <br />
+            You will be required to walk the plank as standard punishment for
+            antiglorious behaviour.
+          </p>
+          <p>Thankyou. Yo Hoe.</p>
+          <p>
+            <a href="#top" onclick="contentNavigation('top')">Back to Home</a>
+          </p>
+        </div>
+
+        <!-- Vote Verified -->
+        <div id="votesent" class="contents hidden">
+          <p>
+            You have participated in our fair and democratic voting process.
+            <br />
+            Your vote has been verified for: Jamie Lievesley.
+          </p>
+          <p>
+            May glory continue. <br />
+            You have been praised for your sensible vote for <br />
+            fair and democratic rule from our one true leader.
+          </p>
+          <p>Thankyou. Yo Hoe.</p>
+          <p>
+            <a href="#top" onclick="contentNavigation('top')">Back to Home</a>
+          </p>
+        </div>
+
+        <!-- Home button -->
+        <div
+          id="homeButton"
+          class="toolButton"
+          onclick="contentNavigation('top')"
+        >
+          &#x2261;
+        </div>
+
+        <!-- (Un)mute audio button -->
+        <div id="audioButton" class="toolButton" onclick="toggleMusic()">
+          &#x266A;
+        </div>
+      </div>
+    </div>
+
+    <!-- Non-displayable Extras -->
+    <div class="display:none">
+      <!-- Facebook API -->
+      <div id="fb-root"></div>
+      <script async>
+        (function (d, s, id) {
+          var js,
+            fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s);
+          js.id = id;
+          js.src =
+            "//connect.facebook.net/en_PI/sdk.js#xfbml=1&appId=722141951156160&version=v2.0";
+          fjs.parentNode.insertBefore(js, fjs);
+        })(document, "script", "facebook-jssdk");
+      </script>
+
+      <!-- Pirate Audio -->
+      <audio id="pirate_audio" autoplay loop>
+        <source src="./audio/pirate.mp3" type="audio/mp3" />
+      </audio>
+    </div>
+  </body>
+</html>
