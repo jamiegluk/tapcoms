@@ -1,0 +1,19 @@
+# On commit: checks linter passes
+
+name: Publish Website
+
+on: [push, pull_request]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: actions-yarn
+        uses: CultureHQ/actions-yarn@master
+        with:
+          args: |
+            install
+            lint
