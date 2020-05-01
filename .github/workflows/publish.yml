@@ -4,29 +4,29 @@ name: Publish Website
 
 on:
   release:
-    types: [ published ]
-    
+    types: [published]
+
 jobs:
   publish:
     if: "!github.event.release.prerelease && github.event.release.target_commitish == 'master'"
-    
+
     runs-on: ubuntu-latest
-    
+
     steps:
-    - uses: actions/checkout@v2
-      
-    - name: actions-yarn
-      uses: CultureHQ/actions-yarn@master
-      with:
-        args: |
-          install
-          lint
-          build
-    
-    - name: FTP-Deploy-Action
-      uses: SamKirkland/FTP-Deploy-Action@3.0.0
-      with:
-        ftp-server: ftp://ftp.jamiegl.com/
-        ftp-username: ${{ secrets.FTP_USERNAME }}
-        ftp-password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: dist
+      - uses: actions/checkout@v2
+
+      - name: actions-yarn
+        uses: CultureHQ/actions-yarn@master
+        with:
+          args: |
+            install
+            lint
+            build
+
+      - name: FTP-Deploy-Action
+        uses: SamKirkland/FTP-Deploy-Action@3.0.0
+        with:
+          ftp-server: ftp://ftp.jamiegl.com/
+          ftp-username: ${{ secrets.FTP_USERNAME }}
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: dist
