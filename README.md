@@ -2,7 +2,7 @@
 
 [![GitHub package.json version](https://img.shields.io/github/package-json/v/jamiegluk/tapcoms)](https://github.com/jamiegluk/tapcoms/releases)
 [![GitHub lint Workflow Status](https://img.shields.io/github/workflow/status/jamiegluk/tapcoms/Lint?label=lint)](https://github.com/jamiegluk/tapcoms/actions?query=workflow%3A%22Lint%22)
-[![GitHub publish Workflow Status](https://img.shields.io/github/workflow/status/jamiegluk/tapcoms/Publish%20Website?label=publish)](https://github.com/jamiegluk/tapcoms/actions?query=workflow%3A%22Publish+Website%22)
+[![GitHub publish Workflow Status](https://img.shields.io/github/workflow/status/jamiegluk/tapcoms/Publish?label=publish)](https://github.com/jamiegluk/tapcoms/actions?query=workflow%3A%22Publish%22)
 [![Website](https://img.shields.io/website?url=http%3A%2F%2Fabarrrtay.com)](http://abarrrtay.com)
 
 > The Abarrrtay Pirate Computing Society website.

@@ -1,6 +1,6 @@
 # On release on master branch, uploads site, raw from 'www' dir, via FTP
 
-name: Publish Website
+name: Publish
 
 on:
   release:
